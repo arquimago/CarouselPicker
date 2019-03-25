@@ -121,8 +121,8 @@ public class CarouselPicker extends ViewPager {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             View view = LayoutInflater.from(context).inflate(this.drawable, null);
-            ImageView iv = (ImageView) view.findViewById(R.id.iv);
-            TextView tv = (TextView) view.findViewById(R.id.tv);
+            ImageView iv = view.findViewById(R.id.iv);
+            TextView tv = view.findViewById(R.id.tv);
             PickerItem pickerItem = items.get(position);
             iv.setVisibility(VISIBLE);
             if (pickerItem.hasDrawable()) {
